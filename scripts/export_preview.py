@@ -13,6 +13,7 @@ source = source.replace('<script src="quiz.js"></script>',
                         '<script>\n' + (root / 'quiz.js').read_text() + '\n</script>')
 source = source.replace('assets/${b.img}.png', '${embeddedImages[b.img]}')
 source = source.replace('assets/${c.img}.png', '${embeddedImages[c.img]}')
+source = source.replace('assets/${q.img}.png', '${embeddedImages[q.img]}')
 for name, url in images.items():
     source = source.replace('assets/' + name + '.png', url)
 source = source.replace('<script>',
